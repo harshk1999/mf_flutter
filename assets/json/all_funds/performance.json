@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "name": "ADITYA BIRLA SUN LIFE ELSS TAX SAVER FUND - REGULAR PLAN -GROWTH",
+            "return": 13.2,
+            "scheme_id": 72,
+            "time": "3y"
+        },
+        {
+            "name": "ADITYA BIRLA SUN LIFE BANKING AND FINANCIAL SERVICES FUND - REGULAR PLAN - GROWTH",
+            "return": 24.5,
+            "scheme_id": 6902,
+            "time": "3y"
+        },
+        {
+            "name": "SBI Long Term Equity Fund ",
+            "return": 14.8,
+            "scheme_id": 5,
+            "time": "3y"
+        }
+    ]
+}

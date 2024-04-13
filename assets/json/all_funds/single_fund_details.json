@@ -1,0 +1,27 @@
+{
+    "data": {
+        "details": {
+            "icon_url": "http://example.com/amc_icon.jpg",
+            "name": "ABC Equity Fund",
+            "category": "Equity",
+            "sub_category": "Mid Cap",
+            "bookmark": false
+        },
+        "stats": {
+            "nav": 160,
+            "fund_size": 120000000,
+            "min_SIP": 1500,
+            "expense_ratio": 1.8,
+            "vr_rating": 5,
+            "riskometer": "Low"
+        },
+        "about": {
+            "exit_load": 1,
+            "lock_in": 365,
+            "about_fund": "Stable income and moderate capital appreciation",
+            "age": "3 years, 11 months, 11 days",
+            "benchmarks": "Nifty 50",
+            "beta": 1
+        }
+    }
+}

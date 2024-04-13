@@ -1,0 +1,30 @@
+{
+    "data": {
+        "faqs": [
+            {
+                "question": "What is a mutual fund?",
+                "answer": "Investors buy shares of a mutual fund, and the fund uses the pooled money to buy a diversified portfolio of assets. The value of a mutual fund's shares, known as Net Asset Value (NAV), fluctuates based on the performance of the underlying securities"
+            },
+            {
+                "question": "How do mutual funds work?  ",
+                "answer": "Investors buy shares of a mutual fund, and the fund uses the pooled money to buy a diversified portfolio of assets. The value of a mutual fund's shares, known as Net Asset Value (NAV), fluctuates based on the performance of the underlying securities"
+            },
+            {
+                "question": "How is the SMC Equity Fund's performance benchmarked?",
+                "answer": "Investors buy shares of a mutual fund, and the fund uses the pooled money to buy a diversified portfolio of assets. The value of a mutual fund's shares, known as Net Asset Value (NAV), fluctuates based on the performance of the underlying securities"
+            },
+            {
+                "question": "How is the risk level managed in the SMC Equity Fund?",
+                "answer": "Investors buy shares of a mutual fund, and the fund uses the pooled money to buy a diversified portfolio of assets. The value of a mutual fund's shares, known as Net Asset Value (NAV), fluctuates based on the performance of the underlying securities"
+            },
+            {
+                "question": "What are the different types of mutual funds?",
+                "answer": "Investors buy shares of a mutual fund, and the fund uses the pooled money to buy a diversified portfolio of assets. The value of a mutual fund's shares, known as Net Asset Value (NAV), fluctuates based on the performance of the underlying securities"
+            },
+            {
+                "question": "What is the minimum investment amount for a mutual fund?",
+                "answer": "Investors buy shares of a mutual fund, and the fund uses the pooled money to buy a diversified portfolio of assets. The value of a mutual fund's shares, known as Net Asset Value (NAV), fluctuates based on the performance of the underlying securities"
+            }
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "data": {
+        "manager_info": [
+            {
+                "name": "R SivaKumar",
+                "experience": "10 years of extensive experience in software development with expertise in multiple programming languages and frameworks.",
+                "education": "Master of Science in Ivestment Bannking",
+                "designation": "Senior Software Engineer",
+                "icon_url": "assets/images/svg/fund_manager.svg"
+            },
+            {
+                "name": "Aditya Pagaria",
+                "experience": "7 years of extensive experience in software development with expertise in multiple programming languages and frameworks.",
+                "education": "Master of Science in Computer Science",
+                "designation": "Senior Software Engineer",
+                "icon_url": "assets/images/svg/fund_manager.svg"
+            }
+        ],
+        "about": "ABC Equity Fund Direct Plan-Growth is a Large Cap mutual fund scheme from ABC Mutual Fund. This fund has been in existence for 11 yrs, having been launched on 01/01/2013. ABC Equity Fund Direct Plan-Growth has ₹31,816 Crores worth of assets under management (AUM) as on 31/12/2023 and is medium-sized fund of its category. The fund has an expense ratio of 0.63%, which is less than what most other Large Cap funds charge."
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "trendingCategories": [
+    {
+      "sector": "Equity",
+      "categories": [
+        {"name": "Large Cap", "Icon": "assets/images/svg/large_cap.svg"},
+        {"name": "Mid Cap", "Icon": "assets/images/svg/mid_cap.svg"},
+        {"name": "Small Cap", "Icon": "assets/images/svg/small_cap.svg"},
+        {"name": "Large and Mid Cap", "Icon": "assets/images/svg/large_cap.svg"},
+        {"name": "Flexi Cap", "Icon": "assets/images/svg/mid_cap.svg"},
+        {"name": "Multi Cap", "Icon": "assets/images/svg/small_cap.svg"},
+        {"name": "Value Oriented", "Icon": "assets/images/svg/mid_cap.svg"},
+        {"name": "Focused Fund", "Icon": "assets/images/svg/large_cap.svg"},
+        {"name": "Sectoral and Thermatic Cap", "Icon": "assets/images/svg/small_cap.svg"}
+      ]
+    },
+    {
+      "sector": "Debt",
+      "categories": [
+        {"name": "Ultra Short Duration", "Icon": "assets/images/svg/ultra_short_duration.svg"},
+        {"name": "Short Duration", "Icon": "assets/images/svg/short_duration.svg"},
+        {"name": "Medium Duration", "Icon": "assets/images/svg/medium_duration.svg"},
+        {"name": "Overnight Bonds", "Icon": "assets/images/svg/overnight_duration.svg"},
+        {"name": "Coporate Bonds", "Icon": "assets/images/svg/large_cap.svg"},
+        {"name": "Credit Risk", "Icon": "assets/images/svg/ultra_short_duration.svg"},
+        {"name": "Liquid Fund", "Icon": "assets/images/svg/medium_duration.svg"},
+        {"name": "Banking and PSU", "Icon": "assets/images/svg/large_cap.svg"},
+        {"name": "Dynamic Bonds", "Icon": "assets/images/svg/short_duration.svg"},
+        {"name": "Gilt Fund", "Icon": "assets/images/svg/medium_duration.sv"}
+
+    
+      ]
+    },
+    {
+      "sector": "Hybrid",
+      "categories": [
+        {"name": "Aggressive Fund", "Icon": "assets/images/svg/aggressive_fund.svg"},
+        {"name": "Balanced Advantage Fund", "Icon": "assets/images/svg/balanced_fund.svg"},
+        {"name": "Dynamic Asset Allocation", "Icon": "assets/images/svg/aggressive_fund.svg"},
+        {"name": "Abritage Fund", "Icon": "assets/images/svg/arbitage_fund.svg"},
+        {"name": "Balance Fund", "Icon": "assets/images/svg/balanced_fund.svg"}
+      ]
+    },
+    {
+      "sector": "Other",
+      "categories": [
+        {"name": "Index Fund", "Icon": "assets/images/svg/index_fund.svg"},
+        {"name": "ETFs", "Icon": "assets/images/svg/index_fund.svg"},
+        {"name": "Fund of Fund", "Icon": "assets/images/svg/fund_of_fund.svg"}
+      ]
+    }
+  ]
+}

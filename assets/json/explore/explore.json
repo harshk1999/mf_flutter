@@ -1,0 +1,14 @@
+{
+    "explore": {
+      "status": "success",
+      "data": {
+        "current_amount": 10000.50,
+        "returns": 8.75,
+          "mf_name": "Example Mutual Fund",
+          "mf_rating": 4.5,
+          "mf_cagr": 12.3,
+          "mf_icon": "/Users/sarthaksingh/Documents/mf_app/assets/images/sbi_icon.png"
+        
+      }
+    }
+  }

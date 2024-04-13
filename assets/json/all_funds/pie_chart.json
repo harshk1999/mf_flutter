@@ -1,0 +1,174 @@
+{
+    "data": {
+        "allocations": {
+            "composition": [
+                {
+                    "name": "equity",
+                    "percentage": 60,
+                    "categories": [
+                        {
+                            "name": "top_stock_holdings",
+                            "allocations": [
+                                {
+                                    "name": "HDFC Bank Ltd.",
+                                    "percentage": 10.6
+                                },
+                                {
+                                    "name": "ICICI Bank Ltd.",
+                                    "percentage": 8.1
+                                },
+                                {
+                                    "name": "Bajaj Finance Ltd.",
+                                    "percentage": 6.2
+                                },
+                                {
+                                    "name": "ICICI Bank Ltd.",
+                                    "percentage": 4.1
+                                },
+                                {
+                                    "name": "Avenue Supermarkets Ltd.",
+                                    "percentage": 3.9
+                                },
+                                {
+                                    "name": "Bajaj Finance Ltd.",
+                                    "percentage": 2.1
+                                },
+                                {
+                                    "name": "Bajaj",
+                                    "percentage": 12.1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "by_market_cap",
+                            "allocations": [
+                                {
+                                    "name": "Large Cap",
+                                    "percentage": 30.8
+                                },
+                                {
+                                    "name": "Mid Cap",
+                                    "percentage": 19.1
+                                },
+                                {
+                                    "name": "Small Cap",
+                                    "percentage": 10.1
+                                },
+                                {
+                                    "name": "Other Cap",
+                                    "percentage": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "by_sector",
+                            "allocations": [
+                                {
+                                    "name": "Energy",
+                                    "percentage": 30.8
+                                },
+                                {
+                                    "name": "Healthcare",
+                                    "percentage": 19.1
+                                },
+                                {
+                                    "name": "Financial",
+                                    "percentage": 10.1
+                                },
+                                {
+                                    "name": "Metals and Mining",
+                                    "percentage": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "debt",
+                    "percentage": 40,
+                    "categories": [
+                        {
+                            "name": "top_debt_holdings",
+                            "allocations": [
+                                {
+                                    "name": "GOI",
+                                    "percentage": 10.6
+                                },
+                                {
+                                    "name": "HDB Financial Services Ltd",
+                                    "percentage": 8.1
+                                },
+                                {
+                                    "name": "Bajaj Housing Financial Services Ltd",
+                                    "percentage": 6.2
+                                },
+                                {
+                                    "name": "Reserve Bank of India",
+                                    "percentage": 4.1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "credit_quality",
+                            "allocations": [
+                                {
+                                    "name": "AAA",
+                                    "percentage": 0.8
+                                },
+                                {
+                                    "name": "SOV",
+                                    "percentage": 8.1
+                                },
+                                {
+                                    "name": "AA",
+                                    "percentage": 6.2
+                                },
+                                {
+                                    "name": "Cash and Call Money",
+                                    "percentage": 4.1
+                                },
+                                {
+                                    "name": "AAA",
+                                    "percentage": 30.8
+                                },
+                                {
+                                    "name": "SOV",
+                                    "percentage": 28.1
+                                },
+                                {
+                                    "name": "Cash and Call Money",
+                                    "percentage": 14.1
+                                },
+                                {
+                                    "name": "AA",
+                                    "percentage": 36.2
+                                }
+                            ]
+                        },
+                        {
+                            "name": "by_instruments",
+                            "allocations": [
+                                {
+                                    "name": "Debenture",
+                                    "percentage": 25.7
+                                },
+                                {
+                                    "name": "GOI Securities",
+                                    "percentage": 19.1
+                                },
+                                {
+                                    "name": "Non Convertible Debenture",
+                                    "percentage": 10.1
+                                },
+                                {
+                                    "name": "Bonds/NCDs",
+                                    "percentage": 5.1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

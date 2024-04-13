@@ -1,0 +1,62 @@
+{
+    "data": [
+        {
+            "icon_url": "assets/images/png/sbi_icon.png",
+            "name": "ICICI Predential Bluechip FUND",
+            "category": "Debt",
+            "sub_category": "Large Cap",
+            "scheme_type": "EQUITY",
+            "ret_1year": 0.05,
+            "ret_3year": 0.15,
+            "ret_5year": 0.3,
+            "fund_size": 12368.00,
+            "fund_rating": 5,
+            "bookmark": false,
+            "total_records": 7,
+            "page_number": 1,
+            "term":"LONG TERM",
+            "risk": "MODERATE",
+            "scheme_id": 4
+        },
+
+        {
+            "icon_url": "assets/images/png/kottakpng.png",
+            "name": "Kotak Mahindra Multi Cap FUND",
+            "category": "Debt",
+            "sub_category": "Large Cap",
+            "scheme_type": "EQUITY",
+            "ret_1year": 0.05,
+            "ret_3year": 0.15,
+            "ret_5year": 0.3,
+            "fund_size": 0.0,
+            "fund_rating": 4,
+            "bookmark": false,
+            "total_records": 7,
+            "page_number": 1,
+            "term":"LONG TERM",
+            "risk": "MODERATE",
+            "scheme_id": 2
+        },
+
+        {
+            "icon_url": "assets/images/png/equity_fund.png",
+            "name": "Mirae Asset Fund",
+            "category": "Debt",
+            "sub_category": "Large Cap",
+            "scheme_type": "EQUITY",
+            "ret_1year": 0.05,
+            "ret_3year": 0.15,
+            "ret_5year": 0.3,
+            "fund_size": 0.0,
+            "fund_rating": 3,
+            "bookmark": false,
+            "total_records": 7,
+            "page_number": 1,
+            "term":"LONG TERM",
+            "risk": "MODERATE",
+            "scheme_id": 7
+        }
+
+        
+    ]
+}

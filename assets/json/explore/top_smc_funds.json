@@ -1,0 +1,37 @@
+{
+  "data": [
+      {
+          "icon_url": "assets/images/png/sbi_icon.png",
+          "name": "SBI Long Term Equity Fund",
+          "returns": 0.75,
+          "duration": "3Y",
+          "bookmark": false,
+          "rating": 4,
+          "category": "Equity",
+          "scheme_id": 13
+      },
+      {
+          "icon_url": "assets/images/png/ICICpred_bank.png",
+          "name": "ICICI Prudential Bluechip Fund",
+          "returns": 11.5,
+          "duration": "3Y",
+          "bookmark": true,
+          "rating": 5,
+          "category": "Equity",
+          "scheme_id": 4
+      },
+      {
+        "icon_url": "assets/images/png/kottakpng.png",
+        "name": "Kotak Mahindra  Bluechip Fund",
+        "returns": 11.5,
+        "duration": "3Y",
+        "bookmark": true,
+        "rating": 5,
+        "category": "Equity",
+        "scheme_id": 8
+    }
+  ]
+}
+
+  
+  

@@ -1,0 +1,75 @@
+{
+    "data": {
+        "popular_funds": [
+            {
+                "icon_url": "assets/images/png/sbi_icon.png",
+                "name": "SBI Long Term Equity Fund",
+                "returns": 11.5,
+                "duration": "3Y",
+                "bookmark": true,
+                "rating": 5,
+                "category": "Equity",
+                "scheme_id": 4
+            },
+            {
+                "icon_url": "assets/images/png/ICICpred_bank.png",
+                "name": "ICICI Prudential Bluechip fund",
+                "returns": 0.75,
+                "duration": "3Y",
+                "bookmark": false,
+                "rating": 4,
+                "category": "Equity",
+                "scheme_id": 13
+            },
+            {
+                "icon_url": "assets/images/png/kottakpng.png",
+                "name": "Kotak Mahindra Bluechip fund",
+                "returns": 0.75,
+                "duration": "3Y",
+                "bookmark": false,
+                "rating": 4,
+                "category": "Equity",
+                "scheme_id": 13
+            }
+
+        ],
+        "trending_categories": [
+            {
+                "name": "Large Cap",
+                "icon": "Icon_url_1"
+            },
+            {
+                "name": "Mid Cap",
+                "icon": "Icon_url_2"
+            },
+            {
+                "name": "Small Cap",
+                "icon": "Icon_url_3"
+            },
+            {
+                "name": "Large & Mid Cap",
+                "icon": "Icon_url_4"
+            },
+            {
+                "name": "Flexi Cap",
+                "icon": "Icon_url_5"
+            },
+            {
+                "name": "Multi Cap",
+                "icon": "Icon_url_6"
+            },
+            {
+                "name": "Value Oriented",
+                "icon": "Icon_url_7"
+            },
+            {
+                "name": "Focused Funds",
+                "icon": "Icon_url_8"
+            },
+            {
+                "name": "Sectoral and Thematic",
+                "icon": "Icon_url_9"
+            }
+        ]
+    }
+}
