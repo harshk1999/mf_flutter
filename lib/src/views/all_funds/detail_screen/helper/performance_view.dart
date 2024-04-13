@@ -15,6 +15,7 @@ class _PerformanceViewState extends State<PerformanceView>
     with SingleTickerProviderStateMixin {
   late final DetailsViewModel dvm;
   late TabController _tabController;
+  bool isExpanded = false;
   @override
   void initState() {
     super.initState();
@@ -28,6 +29,23 @@ class _PerformanceViewState extends State<PerformanceView>
         valueListenable: dvm.detailsNotifier,
         builder: (_, performanceState, __) {
           if (performanceState is DetailsLoaded) {
+            int length = performanceState.performanceList.length > 5
+                ? 5
+                : performanceState.performanceList.length;
+            if (isExpanded) {
+              length = performanceState.performanceList.length;
+            }
+
+            int itemToBe = length - 1;
+            for (int i = 0; i < (length - 1); i++) {
+              if (performanceState.performanceList[i].datumReturn >=
+                      performanceState.fund.returnPercentage &&
+                  performanceState.fund.returnPercentage >=
+                      performanceState.performanceList[i + 1].datumReturn) {
+                itemToBe = i + 1;
+                break;
+              }
+            }
             return SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,19 +86,50 @@ class _PerformanceViewState extends State<PerformanceView>
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: LayoutBuilder(builder: (_, constr) {
-                      final double lowest = 12;
-                      final double mid = 14;
-                      final double highest = 18;
+                      double lowest = performanceState
+                          .performanceList[
+                              performanceState.performanceList.length - 1]
+                          .datumReturn;
+                      final double mid = performanceState.fund.returnPercentage;
+                      double highest =
+                          performanceState.performanceList[0].datumReturn;
+                      if (performanceState.fund.returnPercentage < lowest) {
+                        lowest = performanceState.fund.returnPercentage;
+                      }
+                      if (performanceState.fund.returnPercentage > highest) {
+                        highest = performanceState.fund.returnPercentage;
+                      }
                       final nMid = mid - lowest;
                       final nhighest = highest - lowest;
                       return Stack(
                         clipBehavior: Clip.none,
                         alignment: Alignment.center,
                         children: [
-                          const FixSlider(),
+                          const SizedBox(
+                            height: 66,
+                          ),
+                          Positioned(
+                            bottom: 5,
+                            left: 0,
+                            child: FixSlider(
+                              width: constr.maxWidth,
+                            ),
+                          ),
+                          AnimatedPositioned(
+                            duration: const Duration(milliseconds: 200),
+                            left: (nMid / nhighest) * constr.maxWidth - 27.5,
+                            bottom: 30,
+                            child: Column(
+                              children: [
+                                Text(mid.toStringAsFixed(2) + "%"),
+                                const Text("This Fund"),
+                              ],
+                            ),
+                          ),
                           AnimatedPositioned(
                             duration: const Duration(milliseconds: 200),
                             left: (nMid / nhighest) * constr.maxWidth,
+                            bottom: 0,
                             child: Container(
                               height: 26,
                               width: 17,
@@ -105,6 +154,9 @@ class _PerformanceViewState extends State<PerformanceView>
                           borderRadius: BorderRadius.all(Radius.circular(7)),
                           color: Color(0xffF7F8FA)),
                       child: TabBar(
+                          onTap: (value) {
+                            dvm.changePerfBenchMark(value);
+                          },
                           controller: _tabController,
                           indicator: BoxDecoration(
                               color: Colors.white,
@@ -229,8 +281,21 @@ class _PerformanceViewState extends State<PerformanceView>
                       shrinkWrap: true,
                       physics: const ClampingScrollPhysics(),
                       scrollDirection: Axis.vertical,
-                      itemCount: performanceState.performanceList.length,
+                      itemCount: length,
                       itemBuilder: (_, index) {
+                        if (index == itemToBe) {
+                          return Padding(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 20, bottom: 8),
+                            child: PerformanceFundListContainer(
+                                selected: true,
+                                index: (index + 1).toString(),
+                                fundName: performanceState.fund.name,
+                                fundReturn: performanceState
+                                    .fund.returnPercentage
+                                    .toStringAsFixed(2)),
+                          );
+                        }
                         return Padding(
                           padding: const EdgeInsets.only(
                               left: 20, right: 20, bottom: 8),
@@ -240,22 +305,29 @@ class _PerformanceViewState extends State<PerformanceView>
                                   performanceState.performanceList[index].name,
                               fundReturn: performanceState
                                   .performanceList[index].datumReturn
-                                  .toString()),
+                                  .toStringAsFixed(2)),
                         );
                       }),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 68, right: 68, top: 24),
-                    child: Text(
-                      "Sell all  ${performanceState.singleFundDetails.details.subCategory} Fund (Fund Type)",
-                      style: const TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontFamily: "Poppins",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff3f4599),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isExpanded = true;
+                      });
+                    },
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(left: 68, right: 68, top: 24),
+                      child: Text(
+                        "See all  ${performanceState.singleFundDetails.details.subCategory} Fund (Fund Type)",
+                        style: const TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontFamily: "Poppins",
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff3f4599),
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   )
                 ],

@@ -61,6 +61,7 @@ class DetailsLoaded implements DetailsState {
 class DetailsViewModel {
   final FundsRepository detailsRepo;
   final Map<String, List<(DateTime, double)>> _graphData = {};
+  final Map<String, FundForGraph> _fundsData = {};
   final Map<String, List<PerformanceComparsion>> _sliderData = {};
 
   DetailsViewModel({required this.detailsRepo});
@@ -142,6 +143,13 @@ class DetailsViewModel {
     return await detailsRepo.getPerformance(time);
   }
 
+  void changePerfBenchMark(int index) {
+    final current = _detailsNotifier.value as DetailsLoaded;
+    _detailsNotifier.value = current.copyWith(
+        performanceList: _sliderData[selectDuration(index)],
+        fund: _fundsData[selectDuration(index)]);
+  }
+
   void changeGraphData(int index) {
     final current = _detailsNotifier.value as DetailsLoaded;
     _detailsNotifier.value =
@@ -153,7 +161,13 @@ class DetailsViewModel {
     try {
       final singleFundDetails = await getSingleFundDetails(schemeId);
 
-      final benchmark = await getFundDetails(schemeId, duration);
+      _fundsData["1M"] = await getFundDetails(schemeId, "1M");
+      _fundsData["3M"] = await getFundDetails(schemeId, "3M");
+      _fundsData["6M"] = await getFundDetails(schemeId, "6M");
+      _fundsData["1Y"] = await getFundDetails(schemeId, "1Y");
+      _fundsData["3Y"] = await getFundDetails(schemeId, "3Y");
+      _fundsData["5Y"] = await getFundDetails(schemeId, "5Y");
+
       _graphData["1M"] = await getListOfCoordinates(schemeId, "1M");
       _graphData["3M"] = await getListOfCoordinates(schemeId, "3M");
       _graphData["6M"] = await getListOfCoordinates(schemeId, "6M");
@@ -169,16 +183,16 @@ class DetailsViewModel {
       _sliderData["5Y"] = await getPerformances("5Y");
 
       final composition = await getCompostionForAllocation(schemeId);
-      final performanceList = await getPerformances(duration);
+      // final performanceList = await getPerformances(duration);
       final fundInfo = await getFundInfo(schemeId);
       final ques = await getFaqsForFundInfo();
 
       _detailsNotifier.value = DetailsLoaded(
           // stats,
           singleFundDetails: singleFundDetails,
-          benchmark,
+          _fundsData[duration]!,
           _graphData[duration]!,
-          performanceList,
+          _sliderData[duration]!,
           fundInfo,
           ques,
           composition
