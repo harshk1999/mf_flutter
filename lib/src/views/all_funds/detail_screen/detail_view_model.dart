@@ -30,7 +30,7 @@ class DetailsLoaded implements DetailsState {
   // final Equity equity;
   // final Debt debt;
   final List<Composition> compositionList;
-  final List<Performance> performanceList;
+  final List<PerformanceComparsion> performanceList;
   final FundInformation fundInfo;
   final FundQuestions fundQuestions;
 
@@ -42,7 +42,7 @@ class DetailsLoaded implements DetailsState {
     SingleFundDetails? singleFundDetails,
     FundForGraph? fund,
     List<(DateTime, double)>? listOfcoordinates,
-    List<Performance>? performanceList,
+    List<PerformanceComparsion>? performanceList,
     FundInformation? fundInfo,
     FundQuestions? fundQuestions,
     List<Composition>? compositionList,
@@ -61,6 +61,7 @@ class DetailsLoaded implements DetailsState {
 class DetailsViewModel {
   final FundsRepository detailsRepo;
   final Map<String, List<(DateTime, double)>> _graphData = {};
+  final Map<String, List<PerformanceComparsion>> _sliderData = {};
 
   DetailsViewModel({required this.detailsRepo});
 
@@ -137,8 +138,8 @@ class DetailsViewModel {
     return composition;
   }
 
-  Future<List<Performance>> getPerformances() async {
-    return await detailsRepo.getPerformance();
+  Future<List<PerformanceComparsion>> getPerformances(String time) async {
+    return await detailsRepo.getPerformance(time);
   }
 
   void changeGraphData(int index) {
@@ -160,8 +161,15 @@ class DetailsViewModel {
       _graphData["3Y"] = await getListOfCoordinates(schemeId, "3Y");
       _graphData["5Y"] = await getListOfCoordinates(schemeId, "5Y");
 
+      _sliderData["1M"] = await getPerformances("1M");
+      _sliderData["3M"] = await getPerformances("3M");
+      _sliderData["6M"] = await getPerformances("6M");
+      _sliderData["1Y"] = await getPerformances("1Y");
+      _sliderData["3Y"] = await getPerformances("3Y");
+      _sliderData["5Y"] = await getPerformances("5Y");
+
       final composition = await getCompostionForAllocation(schemeId);
-      final performanceList = await getPerformances();
+      final performanceList = await getPerformances(duration);
       final fundInfo = await getFundInfo(schemeId);
       final ques = await getFaqsForFundInfo();
 

@@ -201,18 +201,16 @@ class FundsRepository {
     }
   }
 
-  Future<List<Performance>> getPerformance() async {
+  Future<List<PerformanceComparsion>> getPerformance(String time) async {
     try {
-      String response =
-          await rootBundle.loadString('assets/json/all_funds/performance.json');
-      Map<String, dynamic> data = jsonDecode(response);
+      final response = await http.get(Uri.parse(
+          '$devServerUrl/api/mf/fund/category/equity/subcategory/flexi-cap/returns?time=${time.toLowerCase()}'));
+      Map<String, dynamic> data = jsonDecode(response.body);
 
       List<dynamic> performances =
-          data['data'].map((e) => Performance.fromJson(e)).toList();
-      List<Performance> performaceList = List<Performance>.from(performances);
-
-      performaceList.sort(
-          (a, b) => b.datumReturn.toInt().compareTo(a.datumReturn.toInt()));
+          data['data'].map((e) => PerformanceComparsion.fromJson(e)).toList();
+      List<PerformanceComparsion> performaceList =
+          List<PerformanceComparsion>.from(performances);
       return performaceList;
     } catch (e) {
       rethrow;

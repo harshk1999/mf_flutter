@@ -1,33 +1,37 @@
-class Data {
-  final List<Performance> data;
+class Performance {
+  final List<PerformanceComparsion> data;
 
-  Data({
+  Performance({
     required this.data,
   });
 
-  factory Data.fromJson(Map<String, dynamic> json) => Data(
-        data: List<Performance>.from(
-            json["data"].map((x) => Performance.fromJson(x))),
+  factory Performance.fromJson(Map<String, dynamic> json) => Performance(
+        data: List<PerformanceComparsion>.from(
+            json["data"].map((x) => PerformanceComparsion.fromJson(x))),
       );
 }
 
-class Performance {
+class PerformanceComparsion {
   final String name;
+  final int nav;
   final double datumReturn;
   final int schemeId;
   final String time;
 
-  Performance({
+  PerformanceComparsion({
     required this.name,
+    required this.nav,
     required this.datumReturn,
     required this.schemeId,
     required this.time,
   });
 
-  factory Performance.fromJson(Map<String, dynamic> json) => Performance(
+  factory PerformanceComparsion.fromJson(Map<String, dynamic> json) =>
+      PerformanceComparsion(
         name: json["name"],
-        datumReturn: json["return"],
+        nav: json["nav"],
+        datumReturn: json["return"]?.toDouble(),
         schemeId: json["scheme_id"],
-        time: json["time"],
+        time: json["time"]!,
       );
 }
